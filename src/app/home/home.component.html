@@ -1,0 +1,11 @@
+<div id="myDIV" class="header">
+  <h2>My To Do List ({{ itemCount }})</h2>
+  <input type="text" id="myInput" placeholder="Title..."  [(ngModel)]="textTodo">
+  <span class="addBtn" (click)="addToTask()">Add</span>
+</div>
+
+<ul id="myUL">
+  <li *ngFor="let item of itemTask; let i = index">{{item}}<span class="close" (click)="delteTask()">×</span></li>
+</ul>
+
+<a routerLink="/about"><span class="addBtn">Add</span></a>
